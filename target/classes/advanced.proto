@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.grpcdemo.advanced";
+option java_outer_classname = "AdvancedProto";
+
+service StreamingService {
+  rpc ServerStream (StreamRequest) returns (stream StreamResponse);
+  rpc ClientStream (stream StreamRequest) returns (StreamResponse);
+  rpc BiDiStream (stream StreamRequest) returns (stream StreamResponse);
+}
+
+message StreamRequest {
+  string message = 1;
+}
+
+message StreamResponse {
+  string response = 1;
+}

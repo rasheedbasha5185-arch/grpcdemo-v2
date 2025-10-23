@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.example.grpcdemo.moderate";
+option java_outer_classname = "ModerateProto";
+
+service ModerateService {
+  rpc ProcessData (ComplexRequest) returns (ComplexResponse);
+}
+
+message ComplexRequest {
+  string requestId = 1;
+  optional string description = 2;
+  repeated Item items = 3;
+  NestedData metadata = 4;
+
+  message Item {
+    string name = 1;
+    int32 quantity = 2;
+  }
+
+  message NestedData {
+    string createdBy = 1;
+    int64 timestamp = 2;
+  }
+}
+
+message ComplexResponse {
+  string status = 1;
+  repeated string processedItems = 2;
+}
