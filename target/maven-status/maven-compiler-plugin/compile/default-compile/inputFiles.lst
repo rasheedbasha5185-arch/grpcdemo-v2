@@ -3,6 +3,7 @@ C:\Users\shaikrasheed.basha\Downloads\grpc-unary-demo\src\main\java\com\example\
 C:\Users\shaikrasheed.basha\Downloads\grpc-unary-demo\src\main\java\com\example\grpcdemo\advanced\BidiStreamingServer.java
 C:\Users\shaikrasheed.basha\Downloads\grpc-unary-demo\src\main\java\com\example\grpcdemo\advanced\ClientStreamingClient.java
 C:\Users\shaikrasheed.basha\Downloads\grpc-unary-demo\src\main\java\com\example\grpcdemo\advanced\ClientStreamingServer.java
+C:\Users\shaikrasheed.basha\Downloads\grpc-unary-demo\src\main\java\com\example\grpcdemo\advanced\GenerateSelfSignedCert.java
 C:\Users\shaikrasheed.basha\Downloads\grpc-unary-demo\src\main\java\com\example\grpcdemo\advanced\JwtInterceptor.java
 C:\Users\shaikrasheed.basha\Downloads\grpc-unary-demo\src\main\java\com\example\grpcdemo\advanced\ObservabilityInterceptor.java
 C:\Users\shaikrasheed.basha\Downloads\grpc-unary-demo\src\main\java\com\example\grpcdemo\advanced\ServerStreamingClient.java

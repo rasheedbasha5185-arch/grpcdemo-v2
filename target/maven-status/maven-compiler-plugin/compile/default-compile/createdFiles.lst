@@ -96,6 +96,7 @@ com\example\grpcdemo\UnaryServiceGrpc$UnaryServiceStub.class
 com\example\grpcdemo\advanced\ObservabilityInterceptor$1.class
 com\example\grpcdemo\advanced\StreamingServiceGrpc$StreamingServiceStub.class
 com\example\grpcdemo\moderate\ModerateServiceGrpc$ModerateServiceBaseDescriptorSupplier.class
+com\example\grpcdemo\advanced\GenerateSelfSignedCert.class
 com\example\grpcdemo\MessageResponseOrBuilder.class
 com\example\grpcdemo\UnaryServiceProto.class
 com\example\grpcdemo\moderate\ComplexRequest$NestedData.class

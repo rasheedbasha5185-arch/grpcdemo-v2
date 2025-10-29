@@ -12,28 +12,37 @@ public class BidiStreamingServer {
                 .build()
                 .start();
 
-        System.out.println("BidiStreamingServer started on port 50062...");
+        System.out.println("🚀 BidiStreamingServer started on port 50062...");
         server.awaitTermination();
     }
 
     static class BidiStreamingImpl extends StreamingServiceGrpc.StreamingServiceImplBase {
+
         @Override
-        public StreamObserver<StreamRequest> biDiStream(StreamObserver<StreamResponse> responseObserver) {
+        public StreamObserver<StreamRequest> biDiStream(final StreamObserver<StreamResponse> responseObserver) {
+
             return new StreamObserver<StreamRequest>() {
+
                 @Override
                 public void onNext(StreamRequest value) {
-                    responseObserver.onNext(StreamResponse.newBuilder()
-                            .setResponse("Echo: " + value.getMessage())
-                            .build());
+                    String msg = value.getMessage();
+                    System.out.println("📩 Received from client: " + msg);
+
+                    StreamResponse response = StreamResponse.newBuilder()
+                            .setResponse("Echo: " + msg)
+                            .build();
+
+                    responseObserver.onNext(response);
                 }
 
                 @Override
                 public void onError(Throwable t) {
-                    System.err.println("Error: " + t);
+                    System.err.println("❌ Stream error: " + t.getMessage());
                 }
 
                 @Override
                 public void onCompleted() {
+                    System.out.println("✅ Client finished streaming.");
                     responseObserver.onCompleted();
                 }
             };
